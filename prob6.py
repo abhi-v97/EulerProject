@@ -33,4 +33,5 @@ sum = n * (n + 1) * 0.5
 sum_sq = n * (n + 1) * (2 * n + 1) / 6
 ans = sum * sum - sum_sq
 
-print(int(ans))
+if __name__ == "__main__":
+    print(int(ans))

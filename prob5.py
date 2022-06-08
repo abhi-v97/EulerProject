@@ -5,7 +5,8 @@
 #basically, find LCM of set {1, 2, 3..., 20}
 from math import lcm, gcd
 
-print(lcm(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20))
+if __name__ == "__main__":
+    print(lcm(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20))
 
 #slightly less lazy solution
 
@@ -15,4 +16,5 @@ x = 1
 for i in range(1,21):
     x *= i//gcd(i, x)
 
-print("LCM =", x)
+if __name__ == "__main__":
+    print(x)
