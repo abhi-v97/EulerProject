@@ -72,4 +72,5 @@ for y, row in enumerate(grid):
                 if product > greatest_product:
                     greatest_product = product
 
-print(greatest_product)
+if __name__ == "__main__":
+    print(greatest_product)
