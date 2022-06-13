@@ -25,6 +25,9 @@ def compute():
             start_num = i
     return str(ans), str(start_num)
 
+#cache stores function arguments and results, reusing them recurisvely as needed
+#drastically reduces time taken, as it can easily look up cached result while counting
+#chain length
 @functools.cache
 def collatz_chain_length(x):
     if x == 1:
@@ -34,6 +37,9 @@ def collatz_chain_length(x):
     else:
         y = x * 3 + 1
     #print(y)
+    
+    #loop to start of function. The +1 adds one to the return value per loop, so a value with
+    #collatz length of 4 essentially returns 1 + 1 + 1 + 1.
     return collatz_chain_length(y) + 1
 
 if __name__ == "__main__":
