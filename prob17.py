@@ -16,10 +16,20 @@ tens = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eight
 def num_to_words(n):
         if n < 20:
             return ones[n]
-        if 20 <= n < 100:
+        elif 20 <= n < 100:
             return tens[n // 10] + (ones[int(repr(n)[-1])] if (n % 10 != 0) else "")
+        elif 100 <= n < 1000:
+            return  ones[int(repr(n)[0])] + "hundred" + ("and" + num_to_words(n%100)if n%100 != 0 else "")
+        elif n == 1000:
+            return "onethousand" #fix this
+
 
 #print(tens[21 //10])
 #print(ones[21[-1]])
-for i in range(90,100):
-    print(num_to_words(i))
+def compute():
+    ans = sum(len(num_to_words(i)) for i in range(1,1001))
+    return str(ans)
+
+
+if __name__ == "__main__":
+    print(compute())
