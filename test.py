@@ -1,9 +1,3 @@
-# brute force
-x = 0
-y = 0
-
-for i in range(1, 101):
-    x += i * i
-    y += i
-
-print(y, x, (y*y) - x)
+for i in range(0,15):
+        for j in range(15):
+            print(i,j)
