@@ -12,5 +12,8 @@ from math import factorial
 
 n = str(factorial(100))
 
-
-print(sum(int(i) for i in str(n)))
+def sum_digits(n):
+    return sum(int(i) for i in str(n))
+    
+if __name__ == "__main__":
+    print(sum_digits(n))
