@@ -9,17 +9,13 @@ Evaluate the sum of all the amicable numbers under 10000.
 """
 from functools import cache
 
-
-
-
 @cache
 def sum_proper_divisors(n):
     s = 0
-    for i in range(1, n):
+    for i in range (1, n):
         if n % i == 0:
             s += i
     return s
-
 
 @cache
 def amicable_numbers(n):
@@ -29,14 +25,11 @@ def amicable_numbers(n):
         for j in range(1, i):
             if i % j == 0 & i != j:
                 s += j
-
-        # print(sum_proper_divisors(s), i)
+                
+        #print(sum_proper_divisors(s), i)
         if sum_proper_divisors(s) == i and (i != s):
             ans.add(i)
-
+    
     return ans
-
-
 if __name__ == "__main__":
-    print(amicable_numbers(10000))
     print(sum(amicable_numbers(10000)))

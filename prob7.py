@@ -43,4 +43,4 @@ def sieveOfEratosthenes(num):
 
 if __name__ == "__main__":
     prime_num = sieveOfEratosthenes(1000000)
-    print(prime_num[10000])
+    print(prime_num)
