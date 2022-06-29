@@ -46,6 +46,5 @@ def compute():
     return long_a * long_b
 
 
-print(compute())
-
-
+if __name__ == "__main__":
+	print(compute())
